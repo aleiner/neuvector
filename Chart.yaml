@@ -7,6 +7,9 @@ version: 0.1.0
 
 appVersion: "103.0.0+up2.6.4"
 dependencies:
+  - name: "neuvector-crds"
+    version: "103.0.0+up2.6.4"
+    repository: "https://charts.rancher.io"
   - name: "neuvector"
     version: "103.0.0+up2.6.4"
     repository: "https://charts.rancher.io"
