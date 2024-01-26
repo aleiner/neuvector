@@ -5,6 +5,17 @@ neuvector:
     ranchersso:
       enabled: true
     runAsUser: 1000
+    apisvc:
+      type: ClusterIP
+    ingress:
+      enabled: true
+      host: neuvector-controller.10.7.2.222.nip.io
+    federation:
+      managedsvc:
+        type: ClusterIP
+        ingress:
+          enabled: true
+          host: neuvector-fed-managed.10.7.2.222.nip.io
   global:
     cattle:
       url: https://rancher.10.7.2.222.nip.io
@@ -18,18 +29,6 @@ neuvector:
       enabled: true
       host: neuvector-manager.10.7.2.222.nip.io
     runAsUser: 1000
-  controller:
-    apisvc:
-      type: ClusterIP
-    ingress:
-      enabled: true
-      host: neuvector-controller.10.7.2.222.nip.io
-    federation:
-      managedsvc:
-        type: ClusterIP
-        ingress:
-          enabled: true
-          host: neuvector-fed-managed.10.7.2.222.nip.io
   enforcer:
     runAsUser: 1000
   cve:
